@@ -22,13 +22,27 @@ var path = require('path');
 
 app.use('/', function() {
   /* GET home page. */
-  router.get('/', function(req, res, next) {
-    console.log('in index');
+  router.get('/*', function(req, res, next) {
     res.sendFile(path.join(__dirname+'/dist/index.html'));
   });
 
 });
 
+
+const forceSSL = function() {
+  return function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect(
+       ['https://', req.get('Host'), req.url].join('')
+      );
+    }
+    next();
+  }
+}
+// Instruct the app
+// to use the forceSSL
+// middleware
+app.use(forceSSL());
 
 
 // catch 404 and forward to error handler

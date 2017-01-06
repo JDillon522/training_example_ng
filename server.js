@@ -42,7 +42,7 @@ const forceSSL = function() {
 // Instruct the app
 // to use the forceSSL
 // middleware
-app.use(forceSSL());
+// app.use(forceSSL());
 
 
 // catch 404 and forward to error handler

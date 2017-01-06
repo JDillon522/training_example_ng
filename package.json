@@ -13,6 +13,7 @@
     "server": "node server"
   },
   "private": true,
+  "engine": "node 6.9.3",
   "dependencies": {
     "@angular/common": "^2.3.1",
     "@angular/compiler": "^2.3.1",

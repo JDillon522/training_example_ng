@@ -57,7 +57,8 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-console.log(err)
+
+  process.stderr.write('---- APP TRAINING EXAMPLE NG ---- \n ERROR: ', err);
   // render the error page
   res.status(err.status || 500);
 
@@ -83,9 +84,11 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(app.get('port'), function() {
+    process.stdout.write('---- TRAINING EXAMPLE NG ---- \n App is running, server is listening on port ', app.get('port'));
+});
 server.on('error', onError);
-server.on('listening', onListening);
+// server.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
@@ -139,13 +142,13 @@ function onError(error) {
  * Event listener for HTTP server "listening" event.
  */
 
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
+// function onListening() {
+//   var addr = server.address();
+//   var bind = typeof addr === 'string'
+//     ? 'pipe ' + addr
+//     : 'port ' + addr.port;
+//   debug('Listening on ' + bind);
+// }
 
 
 module.exports = app;

@@ -2,12 +2,16 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { MaterialModule } from '@angular/material';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
+      ],
+      imports: [
+        MaterialModule.forRoot()
       ],
     });
     TestBed.compileComponents();

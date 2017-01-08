@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Angular 2 Playground';
+  isDarkTheme: boolean = false;
+
+  changeThemeToDark() {
+    console.log('THEMING')
+  }
 }

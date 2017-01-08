@@ -1,14 +1,14 @@
-<div>
-  <md-toolbar color="primary">
-    <h1>{{title}}</h1>
-    <span><md-icon>mood</md-icon></span>
+<div [class.trainingDarkTheme]="isDarkTheme">
+  <md-toolbar class="toolbar" color="primary">
 
-    <span>Yay, Material in Angular 2!</span>
+      <span><h2>{{title}}</h2></span>
 
-    <button md-icon-button [md-menu-trigger-for]="menu">
-      <md-icon>more_vert</md-icon>
-    </button>
+      <button md-icon-button [md-menu-trigger-for]="menu">
+        <md-icon class="material-icons">menu</md-icon>
+      </button>
+
   </md-toolbar>
+
   <md-menu x-position="before" #menu="mdMenu">
     <button md-menu-item>Option 1</button>
     <button md-menu-item>Option 2</button>
@@ -19,12 +19,11 @@
     <button md-raised-button>Of</button>
     <button md-raised-button color="primary">The</button>
     <button md-raised-button color="accent">Buttons</button>
-    <button md-raised-button color="warning">Buttons</button>
+    <button md-raised-button color="warn">Buttons</button>
   </md-card>
 
-  <span class="done">
-    <button md-fab>
-      <md-icon>check circle</md-icon>
-    </button>
-  </span>
+  <button md-fab (click)="isDarkTheme = !isDarkTheme">
+    <md-icon class="material-icons">lightbulb_outline</md-icon>
+  </button>
+
 </div>

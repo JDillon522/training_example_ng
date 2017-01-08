@@ -1,53 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~@angular/material/core/theming/prebuilt/purple-green.scss';
-
-// Originally mean to be part of the following @inport but for some reason the url wouldnt work
-// @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
-/* fallback */
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v19/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-}
-// End @import fix for googleapis
+@import 'assets/theme.scss';
 
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-}
-
-md-card {
-  max-width: 80%;
-  margin: 2em auto;
-  text-align: center;
-}
-
-md-toolbar-row {
-  justify-content: space-between;
-}
-
-.done {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: white;
 }

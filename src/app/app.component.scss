@@ -1,9 +1,10 @@
-.example-container {
-  width: 500px;
+md-toolbar-row {
+  justify-content: space-between;
 }
 
-.example-button-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+
+md-card {
+  max-width: 95%;
+  margin: 0.5em auto;
+  text-align: center;
 }

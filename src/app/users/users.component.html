@@ -1,3 +1,22 @@
-<p>
-  users works!
-</p>
+<div id="addUser">
+    <h1>Users:</h1>
+
+    <button md-icon-button md-mini-fab (click)="addUser()">
+      <md-icon class="material-icons">person_add</md-icon>
+    </button>
+</div>
+
+
+<md-card *ngFor="let user of users">
+  <md-card-title>{{user.first_name}}</md-card-title>
+  <md-card-subtitle>{{user.first_name}} {{user.last_name}}</md-card-subtitle>
+  <md-card-actions>
+    <button md-icon-button>
+      <md-icon class="material-icons">delete</md-icon>
+    </button>
+
+    <button md-icon-button>
+      <md-icon class="material-icons">mode_edit</md-icon>
+    </button>
+  </md-card-actions>
+</md-card>

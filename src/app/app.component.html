@@ -16,16 +16,12 @@
   </md-toolbar>
 
   <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item>Option 1</button>
-    <button md-menu-item>Option 2</button>
+    <button md-menu-item routerLink="/users">Users</button>
+    <button md-menu-item routerLink="/heroes">Heroes</button>
   </md-menu>
 
   <md-card color="primary-lighter">
-    <button md-button>All</button>
-    <button md-raised-button>Of</button>
-    <button md-raised-button color="primary">The</button>
-    <button md-raised-button color="accent">Buttons</button>
-    <button md-raised-button color="warn">Buttons</button>
+    <router-outlet></router-outlet>
   </md-card>
 
 </div>

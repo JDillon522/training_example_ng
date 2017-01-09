@@ -3,9 +3,15 @@
 
       <span><h2>{{title}}</h2></span>
 
-      <button md-icon-button [md-menu-trigger-for]="menu">
-        <md-icon class="material-icons">menu</md-icon>
-      </button>
+      <div>
+        <button md-mini-fab (click)="isDarkTheme = !isDarkTheme">
+          <md-icon class="material-icons">lightbulb_outline</md-icon>
+        </button>
+
+        <button md-icon-button [md-menu-trigger-for]="menu">
+          <md-icon class="material-icons">menu</md-icon>
+        </button>
+      </div>
 
   </md-toolbar>
 
@@ -14,16 +20,12 @@
     <button md-menu-item>Option 2</button>
   </md-menu>
 
-  <md-card>
+  <md-card color="primary-lighter">
     <button md-button>All</button>
     <button md-raised-button>Of</button>
     <button md-raised-button color="primary">The</button>
     <button md-raised-button color="accent">Buttons</button>
     <button md-raised-button color="warn">Buttons</button>
   </md-card>
-
-  <button md-fab (click)="isDarkTheme = !isDarkTheme">
-    <md-icon class="material-icons">lightbulb_outline</md-icon>
-  </button>
 
 </div>

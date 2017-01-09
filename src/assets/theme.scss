@@ -8,16 +8,17 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$training-primary: md-palette($md-blue);
+$training-primary: md-palette($md-deep-orange);
 $training-accent:  md-palette($md-light-blue, A200, A100, A400);
-$training-foreground: md-palette($md-green);
-$training-background: md-palette($md-blue-grey);
+
 
 // The warn palette is optional (defaults to red).
 $training-warn:    md-palette($md-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $training-theme: md-light-theme($training-primary, $training-accent, $training-warn);
+$training-theme-light-background: map_get($md-grey, 100);
+$training-theme-dark-background: map_get($md-grey, 700);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component

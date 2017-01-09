@@ -12,14 +12,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { HeroesComponent } from './heroes/heroes.component';
-
-
+import { AddUserComponent } from './users/dialog/add-user/add-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    HeroesComponent
+    HeroesComponent,
+    AddUserComponent
   ],
   imports: [
     AppRoutingModule,
@@ -31,6 +31,9 @@ import { HeroesComponent } from './heroes/heroes.component';
     JsonpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AddUserComponent
+  ]
 })
 export class AppModule { }

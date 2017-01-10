@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
@@ -11,7 +11,8 @@ describe('AppComponent', () => {
         AppComponent
       ],
       imports: [
-        MaterialModule.forRoot()
+        MaterialModule.forRoot(),
+        RouterTestingModule
       ],
     });
     TestBed.compileComponents();

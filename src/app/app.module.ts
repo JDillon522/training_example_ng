@@ -30,7 +30,9 @@ import { AddUserComponent } from './users/dialog/add-user/add-user.component';
     HttpModule,
     JsonpModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent],
   entryComponents: [
     AddUserComponent

@@ -2,8 +2,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-
+import { MaterialModule } from '@angular/material';
 import { UsersComponent } from './users.component';
+import { UsersService } from '../services/users.service';
 
 describe('UsersComponent', () => {
   let component: UsersComponent;
@@ -11,7 +12,15 @@ describe('UsersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsersComponent ]
+      declarations: [
+        UsersComponent
+      ],
+      imports: [
+        MaterialModule.forRoot()
+      ],
+      providers: [
+        UsersService
+      ]
     })
     .compileComponents();
   }));

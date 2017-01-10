@@ -14,6 +14,7 @@ import { AddUserComponent } from './dialog/add-user/add-user.component';
 export class UsersComponent implements OnInit {
   users: User[];
   errorMessage: string;
+  dialogRef: MdDialogRef<AddUserComponent>;
 
   constructor(
     private usersService: UsersService,
@@ -25,8 +26,8 @@ export class UsersComponent implements OnInit {
   }
 
   openAddUser() {
-    let dialogRef = this.dialog.open(AddUserComponent);
-    dialogRef.afterClosed().subscribe(result => {
+    this.dialogRef = this.dialog.open(AddUserComponent);
+    this.dialogRef.afterClosed().subscribe(result => {
       console.log('CLOSED')
     });
   }

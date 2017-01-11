@@ -10,10 +10,10 @@ import { UsersService } from '../../../services/users.service';
   providers: [ UsersService ]
 })
 export class DeleteUserComponent implements OnInit {
-  private errorMessage: String;
-  public id: Number;
-  public first_name: String;
-  public last_name: String;
+  private errorMessage: string;
+  public id: number;
+  public first_name: string;
+  public last_name: string;
 
   constructor(
     private usersService: UsersService,

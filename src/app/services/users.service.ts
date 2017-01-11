@@ -18,6 +18,12 @@ export class UsersService {
                     .catch(this.handleError);
   }
 
+  addUser (user: User): Observable<User[]> {
+    return this.http.post(this.usersUrl, user)
+                    .map(this.extractData)
+                    .catch(this.handleError);
+  }
+
   private extractData(res: Response) {
     let body = res.json();
     return body || { };

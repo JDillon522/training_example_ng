@@ -14,7 +14,7 @@ import { AddUserComponent } from './dialog/add-user/add-user.component';
 export class UsersComponent implements OnInit {
   users: User[];
   errorMessage: string;
-  dialogRef: MdDialogRef<AddUserComponent>;
+  // dialogRef: MdDialogRef<AddUserComponent>;
 
   constructor(
     private usersService: UsersService,
@@ -26,9 +26,11 @@ export class UsersComponent implements OnInit {
   }
 
   openAddUser() {
-    this.dialogRef = this.dialog.open(AddUserComponent);
-    this.dialogRef.afterClosed().subscribe(result => {
-      console.log('CLOSED')
+    let dialogRef = this.dialog.open(AddUserComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'get') {
+        this.getUsers();
+      }
     });
   }
 
@@ -40,10 +42,6 @@ export class UsersComponent implements OnInit {
                        }, (error) => {
                          this.errorMessage = <any>error;
                        });
-  }
-
-  addUser() {
-
   }
 
 

@@ -24,6 +24,12 @@ export class UsersService {
                     .catch(this.handleError);
   }
 
+  deleteUser (id: Number): Observable<User[]> {
+    return this.http.delete(this.usersUrl + '/' + id)
+                    .map(this.extractData)
+                    .catch(this.handleError);
+  }
+
   private extractData(res: Response) {
     let body = res.json();
     return body || { };

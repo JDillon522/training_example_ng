@@ -1,3 +1,10 @@
-<p>
-  delete-user {{id}} works!
-</p>
+<h3>Are you sure you want to delete {{first_name}} {{last_name}} from the database?</h3>
+
+<div class="userActionButtonGroup">
+  <button md-icon-button md-mini-fab color="accent" (click)="deleteUser()">
+    <md-icon  class="material-icons">delete_forever</md-icon>
+  </button>
+  <button md-icon-button md-mini-fab color="warn" md-dialog-close>
+    <md-icon  class="material-icons">cancel</md-icon>
+  </button>
+</div>

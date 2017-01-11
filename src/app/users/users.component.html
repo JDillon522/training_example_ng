@@ -11,7 +11,7 @@
   <md-card-title>{{user.first_name}}</md-card-title>
   <md-card-subtitle>{{user.first_name}} {{user.last_name}}</md-card-subtitle>
   <md-card-actions>
-    <button md-icon-button (click)="openDeleteUser(user.id)">
+    <button md-icon-button (click)="openDeleteUser(user.id, user.first_name, user.last_name)">
       <md-icon class="material-icons">delete</md-icon>
     </button>
 

@@ -35,9 +35,11 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  openDeleteUser(id: Number) {
+  openDeleteUser(id: Number, first_name: String, last_name: String) {
     let dialogRef = this.dialog.open(DeleteUserComponent);
     dialogRef.componentInstance.id = id;
+    dialogRef.componentInstance.first_name = first_name;
+    dialogRef.componentInstance.last_name = last_name;
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'get') {
         this.getUsers();

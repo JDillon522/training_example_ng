@@ -10,19 +10,27 @@ import { UsersService } from '../../../services/users.service';
   providers: [ UsersService ]
 })
 export class DeleteUserComponent implements OnInit {
+  private errorMessage: String;
   public id: Number;
-
+  public first_name: String;
+  public last_name: String;
+  
   constructor(
     private usersService: UsersService,
     private dialogRef: MdDialogRef<DeleteUserComponent>
   ) { }
 
-  @Input()
-  set name(name: string) {
-    console.log('NAME', name)
+  ngOnInit() {
   }
 
-  ngOnInit() {
+  deleteUser() {
+    this.usersService.deleteUser(this.id)
+                      .subscribe(
+                        (user) => {
+                          this.dialogRef.close('get');
+                        }, (error) => {
+                          this.errorMessage = <any>error;
+                        });
   }
 
 }

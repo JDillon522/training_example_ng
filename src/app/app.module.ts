@@ -14,6 +14,7 @@ import { UsersComponent } from './users/users.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { AddUserComponent } from './users/dialog/add-user/add-user.component';
 import { DeleteUserComponent } from './users/dialog/delete-user/delete-user.component';
+import { EditUserComponent } from './users/dialog/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DeleteUserComponent } from './users/dialog/delete-user/delete-user.comp
     UsersComponent,
     HeroesComponent,
     AddUserComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
+    EditUserComponent
   ],
   imports: [
     AppRoutingModule,
@@ -38,7 +40,8 @@ import { DeleteUserComponent } from './users/dialog/delete-user/delete-user.comp
   bootstrap: [AppComponent],
   entryComponents: [
     AddUserComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
+    EditUserComponent
   ]
 })
 export class AppModule { }

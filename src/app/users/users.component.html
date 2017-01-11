@@ -15,7 +15,7 @@
       <md-icon class="material-icons">delete</md-icon>
     </button>
 
-    <button md-icon-button>
+    <button md-icon-button (click)="openEditUser(user.id, user.first_name, user.last_name, user.email)">
       <md-icon class="material-icons">mode_edit</md-icon>
     </button>
   </md-card-actions>

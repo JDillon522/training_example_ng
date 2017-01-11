@@ -1,0 +1,49 @@
+<h3>Edit a User:</h3>
+<form id="userForm">
+  <md-input-container id="firstName" dividerColor="warn">
+    <input
+      md-input
+      placeholder="First Name"
+      [(ngModel)]="first_name"
+      name="first_name"
+      type="text"
+      required
+      >
+  </md-input-container>
+
+  <md-input-container id="lastName">
+    <input
+      md-input
+      placeholder="Last Name"
+      [(ngModel)]="last_name"
+      name="last_name"
+      type="text"
+      required
+      >
+  </md-input-container>
+
+  <br>
+
+  <md-input-container id="email">
+    <input
+      md-input
+      placeholder="Email"
+      [(ngModel)]="email"
+      name="email"
+      type="email"
+      required
+      >
+  </md-input-container>
+
+  <br>
+
+  <div class="userActionButtonGroup">
+    <button md-icon-button md-mini-fab color="accent" (click)="editUser()">
+      <md-icon  class="material-icons">done</md-icon>
+    </button>
+    <button md-icon-button md-mini-fab color="warn" md-dialog-close>
+      <md-icon  class="material-icons">cancel</md-icon>
+    </button>
+  </div>
+
+</form>

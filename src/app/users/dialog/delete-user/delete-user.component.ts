@@ -14,7 +14,7 @@ export class DeleteUserComponent implements OnInit {
   public id: Number;
   public first_name: String;
   public last_name: String;
-  
+
   constructor(
     private usersService: UsersService,
     private dialogRef: MdDialogRef<DeleteUserComponent>

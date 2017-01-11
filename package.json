@@ -4,7 +4,6 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "ng": "ng",
     "start": "node server.js",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test --watch false",
@@ -27,7 +26,6 @@
     "@angular/platform-browser": "^2.3.1",
     "@angular/platform-browser-dynamic": "^2.3.1",
     "@angular/router": "^3.3.1",
-    "angular-cli": "1.0.0-beta.24",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "core-js": "^2.4.1",
@@ -42,6 +40,7 @@
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
+    "angular-cli": "1.0.0-beta.24",
     "@angular/compiler-cli": "^2.3.1",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",

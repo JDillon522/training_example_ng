@@ -1,0 +1,15 @@
+.userForm {
+  .email {
+    width: 100%;
+  }
+
+  .userActionButtonGroup {
+    [md-icon-button] {
+      line-height: 35px;
+    }
+
+    button:last-child {
+      float: right;
+    }
+  }
+}

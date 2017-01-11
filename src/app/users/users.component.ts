@@ -55,7 +55,6 @@ export class UsersComponent implements OnInit {
     dialogRef.componentInstance.last_name = last_name;
     dialogRef.componentInstance.email = email;
     dialogRef.afterClosed().subscribe(result => {
-console.log('RESULTS', result)
       if (result === 'get') {
         this.getUsers();
       }

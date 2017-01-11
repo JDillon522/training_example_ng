@@ -13,13 +13,15 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { AddUserComponent } from './users/dialog/add-user/add-user.component';
+import { DeleteUserComponent } from './users/dialog/delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     HeroesComponent,
-    AddUserComponent
+    AddUserComponent,
+    DeleteUserComponent
   ],
   imports: [
     AppRoutingModule,
@@ -31,11 +33,12 @@ import { AddUserComponent } from './users/dialog/add-user/add-user.component';
     JsonpModule
   ],
   providers: [
-    
+
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-    AddUserComponent
+    AddUserComponent,
+    DeleteUserComponent
   ]
 })
 export class AppModule { }

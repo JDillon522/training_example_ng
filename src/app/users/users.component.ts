@@ -4,6 +4,7 @@ import { User } from '../services/user';
 import '../rxjs-operators';
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { AddUserComponent } from './dialog/add-user/add-user.component';
+import { DeleteUserComponent } from './dialog/delete-user/delete-user.component';
 
 @Component({
   selector: 'app-users',
@@ -27,6 +28,16 @@ export class UsersComponent implements OnInit {
 
   openAddUser() {
     let dialogRef = this.dialog.open(AddUserComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'get') {
+        this.getUsers();
+      }
+    });
+  }
+
+  openDeleteUser(id: Number) {
+    let dialogRef = this.dialog.open(DeleteUserComponent);
+    dialogRef.componentInstance.id = id;
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'get') {
         this.getUsers();

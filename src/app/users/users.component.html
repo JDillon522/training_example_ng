@@ -6,7 +6,7 @@
     </button>
 </div>
 
-<div [attr.class]="usersProgressBar">
+<div [ngClass]="{'progressBarContainer':true, 'hideUsersProgressBar':hideProgressBar}">
   <md-progress-bar
     color="accent"
     [mode]="mode"

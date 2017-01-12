@@ -16,8 +16,12 @@ md-card {
   }
 }
 
-.hideUsersProgressBar {
-  /deep/ md-progress-bar {
-    display: none;
-  }
+.progressBarContainer {
+    min-height: 10px;
+    
+    &.hideUsersProgressBar {
+      /deep/ md-progress-bar {
+        display: none;
+      }
+    }
 }

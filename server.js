@@ -90,7 +90,7 @@ var server = http.createServer(app);
  */
 
 server.listen(app.get('port'), function() {
-    process.stdout.write('--- App is running, server is listening on port ' + app.get('port') ' ---');
+    process.stdout.write('--- App is running, server is listening on port ' + app.get('port') + ' ---');
 });
 server.on('error', onError);
 // server.on('listening', onListening);

@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 
 
 var app = express();
-
+var router = express.Router();
+var path = require('path');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -16,18 +17,13 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, '/dist')));
 
-var router = express.Router();
-var path = require('path');
 
+app.use('*', function(req, res, next) {
+  process.stdout.write('\n--- Hitting ALL route. Method: ' +
+    req.method + ', Path: ' +
+    req.path + ' ---\n');
 
-app.use('/', function() {
-  process.stdout.write('--- Use / ---');
-
-  router.get('/*', function(req, res, next) {
-    process.stdout.write('--- Use /*/ ---');
-    res.sendFile(path.join(__dirname+'/dist/index.html'));
-  });
-
+  res.sendFile(path.join(__dirname+'/dist/index.html'));
 });
 
 

@@ -21,8 +21,10 @@ var path = require('path');
 
 
 app.use('/', function() {
-  /* GET home page. */
+  process.stdout.write('--- Use / ---');
+
   router.get('/*', function(req, res, next) {
+    process.stdout.write('--- Use /*/ ---');
     res.sendFile(path.join(__dirname+'/dist/index.html'));
   });
 
@@ -49,6 +51,8 @@ const forceSSL = function() {
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
+  process.stderr.write('--- ERROR ---');
+  process.stderr.write(err);
   next(err);
 });
 
@@ -58,7 +62,8 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  process.stderr.write('---- APP TRAINING EXAMPLE NG ---- \n ERROR: ', err);
+  process.stderr.write('--- ERR HANDLER ---');
+  process.stderr.write(err)
   // render the error page
   res.status(err.status || 500);
 
@@ -85,7 +90,7 @@ var server = http.createServer(app);
  */
 
 server.listen(app.get('port'), function() {
-    process.stdout.write('---- TRAINING EXAMPLE NG ---- \n App is running, server is listening on port ', app.get('port'));
+    process.stdout.write('--- App is running, server is listening on port ' + app.get('port') ' ---');
 });
 server.on('error', onError);
 // server.on('listening', onListening);
@@ -126,11 +131,11 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
+      process.stderr.write(bind + ' requires elevated privileges');
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
+      process.stderr.write(bind + ' is already in use');
       process.exit(1);
       break;
     default:

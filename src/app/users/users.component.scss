@@ -15,3 +15,9 @@ md-card {
     float: right;
   }
 }
+
+.hideUsersProgressBar {
+  /deep/ md-progress-bar {
+    display: none;
+  }
+}

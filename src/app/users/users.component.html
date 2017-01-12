@@ -6,6 +6,12 @@
     </button>
 </div>
 
+<div [attr.class]="usersProgressBar">
+  <md-progress-bar
+    color="accent"
+    [mode]="mode"
+    ></md-progress-bar>
+</div>
 
 <md-card *ngFor="let user of users">
   <md-card-title>{{user.first_name}}</md-card-title>

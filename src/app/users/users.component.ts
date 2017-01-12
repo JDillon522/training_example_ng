@@ -16,7 +16,9 @@ import { EditUserComponent } from './dialog/edit-user/edit-user.component';
 export class UsersComponent implements OnInit {
   users: User[];
   errorMessage: string;
-  // dialogRef: MdDialogRef<AddUserComponent>;
+  usersProgressBar: string;
+  mode = 'indeterminate';
+
 
   constructor(
     private usersService: UsersService,
@@ -29,10 +31,12 @@ export class UsersComponent implements OnInit {
 
   openAddUser() {
     let dialogRef = this.dialog.open(AddUserComponent);
+    this.usersProgressBar = '';
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'get') {
         this.getUsers();
       }
+      this.usersProgressBar = 'hideUsersProgressBar';
     });
   }
 
@@ -41,10 +45,12 @@ export class UsersComponent implements OnInit {
     dialogRef.componentInstance.id = id;
     dialogRef.componentInstance.first_name = first_name;
     dialogRef.componentInstance.last_name = last_name;
+    this.usersProgressBar = '';
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'get') {
         this.getUsers();
       }
+      this.usersProgressBar = 'hideUsersProgressBar';
     });
   }
 
@@ -54,10 +60,12 @@ export class UsersComponent implements OnInit {
     dialogRef.componentInstance.first_name = first_name;
     dialogRef.componentInstance.last_name = last_name;
     dialogRef.componentInstance.email = email;
+    this.usersProgressBar = '';
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'get') {
         this.getUsers();
       }
+      this.usersProgressBar = 'hideUsersProgressBar';
     });
   }
 
@@ -65,6 +73,7 @@ export class UsersComponent implements OnInit {
     this.usersService.getUsers()
                      .subscribe(
                        (users) => {
+                         this.usersProgressBar = 'hideUsersProgressBar';
                          this.users = users;
                        }, (error) => {
                          this.errorMessage = <any>error;

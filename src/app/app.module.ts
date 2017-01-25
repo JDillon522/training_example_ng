@@ -15,6 +15,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { AddUserComponent } from './users/dialog/add-user/add-user.component';
 import { DeleteUserComponent } from './users/dialog/delete-user/delete-user.component';
 import { EditUserComponent } from './users/dialog/edit-user/edit-user.component';
+import { TrickeryComponent } from './trickery/trickery.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { EditUserComponent } from './users/dialog/edit-user/edit-user.component'
     HeroesComponent,
     AddUserComponent,
     DeleteUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    TrickeryComponent
   ],
   imports: [
     AppRoutingModule,

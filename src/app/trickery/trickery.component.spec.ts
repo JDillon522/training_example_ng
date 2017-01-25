@@ -2,25 +2,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-import { MaterialModule } from '@angular/material';
-import { DeleteUserComponent } from './delete-user.component';
 
-describe('DeleteUserComponent', () => {
-  let component: DeleteUserComponent;
-  let fixture: ComponentFixture<DeleteUserComponent>;
+import { TrickeryComponent } from './trickery.component';
+
+describe('TrickeryComponent', () => {
+  let component: TrickeryComponent;
+  let fixture: ComponentFixture<TrickeryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeleteUserComponent ],
-      imports: [
-        MaterialModule.forRoot()
-      ]
+      declarations: [ TrickeryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeleteUserComponent);
+    fixture = TestBed.createComponent(TrickeryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

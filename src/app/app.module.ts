@@ -16,6 +16,8 @@ import { AddUserComponent } from './users/dialog/add-user/add-user.component';
 import { DeleteUserComponent } from './users/dialog/delete-user/delete-user.component';
 import { EditUserComponent } from './users/dialog/edit-user/edit-user.component';
 import { TrickeryComponent } from './trickery/trickery.component';
+import { FirstChildComponent } from './trickery/first-child/first-child.component';
+import { SecondChildComponent } from './trickery/first-child/second-child/second-child.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { TrickeryComponent } from './trickery/trickery.component';
     AddUserComponent,
     DeleteUserComponent,
     EditUserComponent,
-    TrickeryComponent
+    TrickeryComponent,
+    FirstChildComponent,
+    SecondChildComponent
   ],
   imports: [
     AppRoutingModule,

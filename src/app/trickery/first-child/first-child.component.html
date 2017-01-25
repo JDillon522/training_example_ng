@@ -1,7 +1,9 @@
 <p>
-  first-child works!
+  My name is: {{name}}
 </p>
 
 <md-card>
-  <app-second-child></app-second-child>
+  <app-second-child
+    [name]="childName"
+  ></app-second-child>
 </md-card>

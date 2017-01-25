@@ -1,5 +1,19 @@
 <section>
   <p>Here we'll attempt to play with some Angular 2 trickery.</p>
+  <p>Change the values below and watch how it affects each component.</p>
+  <md-input-container>
+    <input
+      md-input
+      placeholder="First Child Name"
+      [(ngModel)]="firstChildName">
+  </md-input-container>
+
+  <md-input-container>
+    <input
+      md-input
+      placeholder="Second Child Name"
+      [(ngModel)]="secondChildName">
+  </md-input-container>
 </section>
 
 <!-- <section>
@@ -7,5 +21,12 @@
   <p>{[interpolationTest]}</p>
 </section> -->
 <md-card>
-  <app-first-child></app-first-child>
+    <app-first-child
+    [name]="firstChildName"
+    [childName]="secondChildName"
+    ></app-first-child>
+</md-card>
+
+<md-card>
+  <app-sibling-child></app-sibling-child>
 </md-card>

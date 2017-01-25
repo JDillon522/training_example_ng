@@ -18,6 +18,7 @@ import { EditUserComponent } from './users/dialog/edit-user/edit-user.component'
 import { TrickeryComponent } from './trickery/trickery.component';
 import { FirstChildComponent } from './trickery/first-child/first-child.component';
 import { SecondChildComponent } from './trickery/first-child/second-child/second-child.component';
+import { SiblingChildComponent } from './trickery/sibling-child/sibling-child.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SecondChildComponent } from './trickery/first-child/second-child/second
     EditUserComponent,
     TrickeryComponent,
     FirstChildComponent,
-    SecondChildComponent
+    SecondChildComponent,
+    SiblingChildComponent
   ],
   imports: [
     AppRoutingModule,

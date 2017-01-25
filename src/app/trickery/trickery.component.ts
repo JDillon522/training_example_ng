@@ -8,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrickeryComponent implements OnInit {
   // public interpolationTest: 'I should work';
+  public firstChildName: string = 'Primus!';
+  public secondChildName: string = 'Secundus!';
 
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

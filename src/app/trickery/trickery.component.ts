@@ -10,6 +10,7 @@ export class TrickeryComponent implements OnInit {
   // public interpolationTest: 'I should work';
   public firstChildName: string = 'Primus!';
   public secondChildName: string = 'Secundus!';
+  public sisterName: string = 'Sister Component';
 
   constructor() { }
 

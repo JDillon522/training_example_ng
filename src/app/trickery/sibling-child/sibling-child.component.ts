@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sibling-child',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sibling-child.component.scss']
 })
 export class SiblingChildComponent implements OnInit {
+  @Input() name: string;
+  @Output() siblingAge = new EventEmitter<number>();
+
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  submitNewAge(age: number) {
+    this.siblingAge.emit(age);
   }
 
 }

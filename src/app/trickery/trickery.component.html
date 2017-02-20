@@ -1,11 +1,12 @@
 <section>
   <p>Here we'll attempt to play with some Angular 2 trickery.</p>
-  <p>Change the values below and watch how it affects each component.</p>
+  <p>Change the values below and watch how Input Binding affects each component.</p>
   <md-input-container>
     <input
       md-input
       placeholder="First Child Name"
-      [(ngModel)]="firstChildName">
+      [(ngModel)]="firstChildName"
+      [(ngModel)]="sisterName">
   </md-input-container>
 
   <md-input-container>
@@ -14,6 +15,10 @@
       placeholder="Second Child Name"
       [(ngModel)]="secondChildName">
   </md-input-container>
+</section>
+
+<section>
+
 </section>
 
 <!-- <section>
@@ -28,5 +33,7 @@
 </md-card>
 
 <md-card>
-  <app-sibling-child></app-sibling-child>
+  <app-sibling-child
+    [name]="sisterName"
+  ></app-sibling-child>
 </md-card>

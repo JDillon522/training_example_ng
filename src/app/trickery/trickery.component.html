@@ -4,7 +4,7 @@
   <md-input-container>
     <input
       md-input
-      placeholder="First Child Name"
+      placeholder="First and Sibling Child's Name"
       [(ngModel)]="firstChildName"
       [(ngModel)]="sisterName">
   </md-input-container>
@@ -27,13 +27,14 @@
 </section> -->
 <md-card>
     <app-first-child
-    [name]="firstChildName"
-    [childName]="secondChildName"
+    [firstChildName]="firstChildName"
+    [secondChildName]="secondChildName"
+    color="primary"
     ></app-first-child>
 </md-card>
 
 <md-card>
   <app-sibling-child
-    [name]="sisterName"
+    [siblingName]="sisterName"
   ></app-sibling-child>
 </md-card>

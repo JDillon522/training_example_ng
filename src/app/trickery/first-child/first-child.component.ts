@@ -6,9 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./first-child.component.scss']
 })
 export class FirstChildComponent implements OnInit {
-  @Input() name: string;
-  @Input() childName: string;
-  
+  @Input() firstChildName: string;
+  @Input() secondChildName: string;
+
 
   constructor() { }
 

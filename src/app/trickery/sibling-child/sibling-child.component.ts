@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./sibling-child.component.scss']
 })
 export class SiblingChildComponent implements OnInit {
-  @Input() name: string;
+  @Input() siblingName: string;
   @Output() siblingAge = new EventEmitter<number>();
 
 

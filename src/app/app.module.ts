@@ -22,6 +22,7 @@ import { SecondChildComponent } from './trickery/first-child/second-child/second
 import { SiblingChildComponent } from './trickery/sibling-child/sibling-child.component';
 import { SetterComponent } from './trickery/first-child/setter/setter.component';
 import { ChangesComponent } from './trickery/first-child/changes/changes.component';
+import { FourOFourComponent } from './four-o-four/four-o-four.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ChangesComponent } from './trickery/first-child/changes/changes.compone
     SiblingChildComponent,
     SetterComponent,
     ChangesComponent,
-    DetailComponent
+    DetailComponent,
+    FourOFourComponent
   ],
   imports: [
     AppRoutingModule,

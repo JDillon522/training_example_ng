@@ -11,6 +11,7 @@ import { MaterialModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
+import { DetailComponent } from './users/detail/detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { AddUserComponent } from './users/dialog/add-user/add-user.component';
 import { DeleteUserComponent } from './users/dialog/delete-user/delete-user.component';
@@ -19,6 +20,8 @@ import { TrickeryComponent } from './trickery/trickery.component';
 import { FirstChildComponent } from './trickery/first-child/first-child.component';
 import { SecondChildComponent } from './trickery/first-child/second-child/second-child.component';
 import { SiblingChildComponent } from './trickery/sibling-child/sibling-child.component';
+import { SetterComponent } from './trickery/first-child/setter/setter.component';
+import { ChangesComponent } from './trickery/first-child/changes/changes.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { SiblingChildComponent } from './trickery/sibling-child/sibling-child.co
     TrickeryComponent,
     FirstChildComponent,
     SecondChildComponent,
-    SiblingChildComponent
+    SiblingChildComponent,
+    SetterComponent,
+    ChangesComponent,
+    DetailComponent
   ],
   imports: [
     AppRoutingModule,

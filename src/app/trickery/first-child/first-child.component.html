@@ -1,9 +1,33 @@
-<p>
-  My name is: {{firstChildName}}
-</p>
+<section>
+  <p>
+    My name is: {{firstChildName}}.
+  </p>
+  <p>
+    My name changes using input bindings from my parent component.
+  </p>
 
-<md-card>
-  <app-second-child
-    [name]="secondChildName"
-  ></app-second-child>
-</md-card>
+  <md-input-container>
+    <input
+      md-input
+      placeholder="Change Setter's Name"
+      [(ngModel)]="setterName"
+      >
+  </md-input-container>
+
+</section>
+
+<section>
+  <md-card>
+    <app-second-child
+      [name]="secondChildName"
+    ></app-second-child>
+  </md-card>
+
+  <md-card>
+    <app-setter
+      [setterName]="setterName"
+    >
+    </app-setter>
+  </md-card>
+
+</section>

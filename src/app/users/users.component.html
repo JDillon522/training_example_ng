@@ -24,5 +24,9 @@
     <button md-icon-button (click)="openEditUser(user.id, user.first_name, user.last_name, user.email)">
       <md-icon class="material-icons">mode_edit</md-icon>
     </button>
+
+    <button md-icon-button routerLink="{{user.id}}">
+      <md-icon class="material-icons">more_horiz</md-icon>
+    </button>
   </md-card-actions>
 </md-card>

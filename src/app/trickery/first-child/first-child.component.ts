@@ -9,6 +9,7 @@ export class FirstChildComponent implements OnInit {
   @Input() firstChildName: string;
   @Input() secondChildName: string;
 
+  setterName: string;
 
   constructor() { }
 

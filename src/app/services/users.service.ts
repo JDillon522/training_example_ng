@@ -18,6 +18,12 @@ export class UsersService {
                     .catch(this.handleError);
   }
 
+  getUser (id: number): Observable<User> {
+    return this.http.get(this.usersUrl + '/' + id)
+                    .map(this.extractData)
+                    .catch(this.handleError);
+  }
+
   addUser (user: User): Observable<User[]> {
     return this.http.post(this.usersUrl, user)
                     .map(this.extractData)

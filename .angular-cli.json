@@ -23,8 +23,8 @@
       "scripts": [
         "../node_modules/hammerjs/hammer.min.js"
       ],
-      "environments": {
-        "source": "environments/environment.ts",
+      "environmentSource": "environments/environment.ts",
+      "environments": {        
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
